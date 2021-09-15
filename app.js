@@ -1,5 +1,31 @@
 
-
+// navbar
+var navbar = document.getElementsByClassName('home-navbar')
+var navSec = document.getElementById('home-header')
+var menu = document.getElementsByClassName('home-li')
+window.addEventListener('scroll', ()=> {
+    if(window.scrollY>500) {
+        if(navSec.style.position == 'fixed') return
+        console.log(1)
+        navSec.style.position = 'fixed'
+        navbar[0].style.background= 'white'
+        navbar[0].style.boxShadow= '0 1px 3px rgb(0 0 0 / 11%)'
+        navSec.style.animation = 'appearance 1s ease normal'
+        for (let i = 0; i < menu.length; i++) {
+            menu[i].style.color = 'var(--gray)'
+            
+        }
+    } else {
+        navSec.style.position = 'absolute'
+        navSec.style.animation = ''
+        for (let i = 0; i < menu.length; i++) {
+            menu[i].style.color = ''
+            
+        }
+        navbar[0].style.background= '#000000bb'
+        navbar[0].style.boxShadow= '0'
+    } 
+}) 
 
 
 /* Slider section start */
@@ -56,8 +82,8 @@ let intervalSlider = setInterval(function () {
     const txts = document.querySelector(".slc-welcomeText").children,
     txtsLen = txts.length;
     let index = 0;
-    const textInTimer = 3000,
-    textOutTimer = 2000;
+    const textInTimer = 5000,
+    textOutTimer = 3000;
 
 function animateText() {
     for (let i = 0; i < txtsLen; i++) {
@@ -85,40 +111,42 @@ window.onload = animateText;
 
 /* About section start */
 
-let imgAboutRight = document.querySelector(".about-photo-right img")
-imagesAboutRight = [
-    'img/about01.jpg',
-    'img/about02 (1).jpg',
-    'img/about03.jpg'
-]
+// let imgAboutRight = document.querySelector(".about-photo-right img")
+// imagesAboutRight = [
+//     'img/about01.jpg',
+//     'img/about02 (1).jpg',
+//     'img/about03.jpg'
+// ]
 
-intervalCountAboutRight = 0;
-let intervalAboutRight = setInterval(function () {
-    if (intervalCountAboutRight == 3) {
-        intervalCountAboutRight = 0
-    } else {
-        imgAboutRight.setAttribute('src', imagesAboutRight[intervalCountAboutRight])
-        intervalCountAboutRight++
-    }
-}, 3000)
+// intervalCountAboutRight = 0;
+// let intervalAboutRight = setInterval(function () {
+//     if (intervalCountAboutRight == 3) {
+//         intervalCountAboutRight = 0
+//     } else {
+//         imgAboutRight.setAttribute('src', imagesAboutRight[intervalCountAboutRight])
+//         intervalCountAboutRight++
+//     }
+// }, 3000)
 
+// let dots = document.getElementsByClassName('dots')
+// console.log(dots)
 
-let imgAboutLeft = document.querySelector(".about-photo-lr=eft img")
-imagesAboutLeft = [
-    'img/about04.jpg',
-    'img/about05 (1).jpg',
-    'img/about06.jpg'
-]
+// let imgAboutLeft = document.getElementById("slider-img")
+// imagesAboutLeft = [
+//     'img/about04.jpg',
+//     'img/about05 (1).jpg',
+//     'img/about06.jpg'
+// ]
 
-intervalCountAboutLeft = 0;
-let intervalAboutLeft = setInterval(function () {
-    if (intervalCountAboutLeft == 3) {
-        intervalCountAboutLeft = 0
-    } else {
-        imgAboutLeft.setAttribute('src', imagesAboutLeft[intervalCountAboutLeft])
-        intervalCountAboutLeft++
-    }
-}, 3000)
+// intervalCountAboutLeft = 0;
+// let intervalAboutLeft = setInterval(function () {
+//     if (intervalCountAboutLeft == 3) {
+//         intervalCountAboutLeft = 0
+//     } else {
+//         imgAboutLeft.setAttribute('src', imagesAboutLeft[intervalCountAboutLeft])
+//         intervalCountAboutLeft++
+//     }
+// }, 3000)
 
 /* About section end */
 
@@ -153,40 +181,15 @@ function showSlides(n) {
 }
 
 
+
 /* Gallery filter start */
 
-filterSelection("all")
 
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("gallery-photo");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        removeClass(x[i], "gallery-show");
-        if (x[i].className.indexOf(c) > -1) addClass(x[i], "gallery-show");
-    }
-}
-
-function addClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {
-            element.className += " " + arr2[i];
-        }
-    }
-}
-
-function removeClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-        }
-    }
-    element.className = arr1.join(" ");
-}
-
+window.addEventListener('load', () => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    })
+  });

@@ -8,24 +8,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Oswald:wght@300&display=swap"
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Kaushan+Script&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Yellowtail&display=swap"
         rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Oswald&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="css/common.css">
@@ -33,7 +29,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <title></title>
+    <title>Restaurant</title>
 
 </head>
 
@@ -41,35 +37,36 @@
 
     <!-- header section start-->
     <section id="home-header" class=" w100">
-        <div class="navbar home-navbar">
+        <div id="main-navbar" class="navbar home-navbar">
             <div class="container">
                 <div class="row">
                     <div class="col-2">
                         <div class="navbar-logo flex justify-content-center align-items-center h100">
-                           <a href="index.html">
-                            <img src="img/logo-restaurant.png" alt="Logo">
-                           </a>
+                            <a href="index.html">
+                                <img src="img/logo-restaurant.png" alt="Logo">
+                            </a>
                         </div>
 
                     </div>
                     <div class="col-7">
                         <div class="nav h100">
                             <input id="nav-toggle" type="checkbox">
-                            <ul class="nav-menu flex home-nav-menu justify-content-end align-items-center h100 fourth-font">
+                            <ul
+                                class="nav-menu flex home-nav-menu justify-content-end align-items-center h100 fourth-font">
                                 <li>
-                                    <a href="index.html">HOME</a>
+                                    <a class='home-li' href="index.html">HOME</a>
                                 </li>
                                 <li>
-                                    <a href="about.html">ABOUT</a>
+                                    <a class='home-li' href="about.html">ABOUT</a>
                                 </li>
                                 <li>
-                                    <a href="menu.html">MENU</a>
+                                    <a class='home-li' href="menu.html">MENU</a>
                                 </li>
                                 <li>
-                                    <a href="gallery.html">GALLERY</a>
+                                    <a class='home-li' href="gallery.html">GALLERY</a>
                                 </li>
                                 <li>
-                                    <a href="location.html">LOCATION</a>
+                                    <a class='home-li' href="location.html">LOCATION</a>
                                 </li>
                             </ul>
                         </div>
@@ -87,7 +84,6 @@
 
     <!-- Slider section start -->
     <div id="slider" class="w100">
-
         <div class="slide section-padding background-no-repeat background-size-cover background-position-center">
             <div class="slide-background">
                 <img src="img/silder1.jpg" alt="">
@@ -95,7 +91,8 @@
             <div class="container-full">
                 <div class="row">
                     <div class="col-1">
-                        <div class="slide-choose-left flex align-items-center h100 cursor-pointer" onclick="goPrev()">
+                        <div class="slide-choose-left flex justify-content-center align-items-center h100 cursor-pointer"
+                            onclick="goPrev()">
                             <img style="z-index: 2;" src="img/btn-choose-left.png" alt="">
                         </div>
                     </div>
@@ -129,7 +126,7 @@
                                     <div class="col-12">
                                         <div
                                             class="slc-mini-text fifth-font flex justify-content-center align-items-center w100">
-                                            <p style="z-index: 2;">The Chef creates divine combinations</p>
+                                            <p style="z-index: 2;"><i>The Chef creates divine combinations</i></p>
                                         </div>
                                     </div>
                                 </div>
@@ -137,7 +134,8 @@
                         </div>
                     </div>
                     <div class="col-1">
-                        <div class="slide-choose-right flex justify-content-end align-items-center h100 cursor-pointer" onclick="goNext()">
+                        <div class="slide-choose-right flex justify-content-center align-items-center h100 cursor-pointer"
+                            onclick="goNext()">
                             <img style="z-index: 2;" src="img/btn-choose-right.png" alt="">
                         </div>
                     </div>
@@ -187,9 +185,14 @@
                     <img src="img/about01.jpg" alt="" class="w100">
                 </div>
                 <div class="about-photo about-photo-left">
-                    <img src="img/about05 (1).jpg" alt="" class="w100">
-                    <!-- <img src="img/btn-choose-left.png" alt="" class="about-choose-left">
-                    <img src="img/btn-choose-right.png" alt="" class="about-choose-right"> -->
+                    <div class="about-slider">
+                        <img src="img/about05.jpg" id="slider-img" alt="" class="w100">
+                        <ul class="dots" id="dots">
+                            <li class="dot" onclick="changeImg(0)"></li>
+                            <li class="dot" onclick="changeImg(1)"></li>
+                            <li class="dot " onclick="changeImg(2)"></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="about-content">
                     <p>
@@ -592,7 +595,9 @@
                         <input type="text" placeholder="Name" class="contact-form">
                         <input type="email" placeholder="Email" class="contact-form">
                         <input type="text" placeholder="Subject" class="contact-form">
-                        <input type="text" name="" id="" placeholder="Message" class="contact-message contact-form">
+                        <!-- <input type="text" name="" id="" placeholder="Message" class="contact-message contact-form"> -->
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"
+                            class="contact-message contact-form"></textarea>
                     </form>
                 </div>
             </div>
@@ -614,9 +619,9 @@
     <!-- Map section start -->
     <section id="map" style="overflow: hidden;">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.4701955087817!2d49.94633941493267!3d40.39843336467674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403063101f8d558d%3A0x7c182de7250a09a2!2sPark%20Firin!5e0!3m2!1saz!2s!4v1619630430820!5m2!1saz!2s"
-            width="1350" height="480" style="border: 1px;;" allowfullscreen="" loading="lazy"></iframe>
-    </section>0
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799070302!2d-74.25987305798013!3d40.69767006494068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2zTnl1LVlvcmssIE55dSBZb3JrLCBBbWVyaWthIEJpcmzJmcWfbWnFnyDFnnRhdGxhcsSx!5e0!3m2!1saz!2s!4v1631685734218!5m2!1saz!2s"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
     <!-- Map section end -->
 
     <!-- Footer section start -->
@@ -639,6 +644,7 @@
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
+    <script src="about.js"></script>
 
 
 

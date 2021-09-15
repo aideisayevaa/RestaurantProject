@@ -8,24 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Oswald:wght@300&display=swap"
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Kaushan+Script&family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@300;400;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Yellowtail&display=swap"
         rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -42,7 +30,7 @@
                 <div class="row">
                     <div class="col-2">
                         <div class="navbar-logo flex justify-content-center align-items-center h100">
-                            <img src="img/logo-restaurant.png" alt="Logo">
+                            <a href="index.html"><img src="img/logo-restaurant.png" alt="Logo"></a>
                         </div>
                     </div>
                     <div class="col-7">
@@ -118,17 +106,17 @@
                             <button class="btn-gallery" onclick="filterSelection('food')"> Food</button>
                             <button class="btn-gallery" onclick="filterSelection('restaurant')"> Restaurant</button>
                             <button class="btn-gallery" onclick="filterSelection('desserts')"> Desserts</button>-->
-                        <li>
-                            <a href="#">All Photos</a>
+                        <li class="gallery-btns" onclick="filterSelection('all')">
+                            All
                         </li>
-                        <li>
-                            <a href="#">Food</a>
+                        <li class="gallery-btns" onclick="filterSelection('food')">
+                            Food
                         </li>
-                        <li>
-                            <a href="#">Restaurant</a>
+                        <li class="gallery-btns" onclick="filterSelection('restaurant')">
+                            Restaurant
                         </li>
-                        <li>
-                            <a href="#">Desserts</a>
+                        <li class="gallery-btns" onclick="filterSelection('desserts')">
+                            Desserts
                         </li>
                     </div>
                 </div>
@@ -293,7 +281,9 @@
                         <input type="text" placeholder="Name" class="contact-form">
                         <input type="email" placeholder="Email" class="contact-form">
                         <input type="text" placeholder="Subject" class="contact-form">
-                        <input type="text" name="" id="" placeholder="Message" class="contact-message contact-form">
+                        <!-- <input type="text" name="" id="" placeholder="Message" class="contact-message contact-form"> -->
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"
+                            class="contact-message contact-form"></textarea>
                     </form>
                 </div>
             </div>
@@ -313,10 +303,10 @@
     <!-- Contact section end -->
 
     <!-- Map section start -->
-    <section id="map">
+    <section id="map" style="overflow: hidden;">
         <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.4701955087817!2d49.94633941493267!3d40.39843336467674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403063101f8d558d%3A0x7c182de7250a09a2!2sPark%20Firin!5e0!3m2!1saz!2s!4v1619630430820!5m2!1saz!2s"
-            width="1350" height="480" style="border: 1px;;" allowfullscreen="" loading="lazy"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799070302!2d-74.25987305798013!3d40.69767006494068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2zTnl1LVlvcmssIE55dSBZb3JrLCBBbWVyaWthIEJpcmzJmcWfbWnFnyDFnnRhdGxhcsSx!5e0!3m2!1saz!2s!4v1631685734218!5m2!1saz!2s"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
     <!-- Map section end -->
 
@@ -336,7 +326,7 @@
         </div>
     </section>
     <!-- Footer section end -->
-
+    <script src="gallery.js"></script>
 </body>
 
 </html>
