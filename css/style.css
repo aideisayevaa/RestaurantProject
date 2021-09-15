@@ -103,7 +103,7 @@
 
 .slc-welcomeText h2.text-in{
 	display: block;
-	animation: textIn .5s ease;
+	animation: textIn .4s ease;
 }
 .slc-welcomeText h2.text-out{
 	animation: textOut .5s ease;
@@ -113,20 +113,7 @@
 	0%{
 		transform: translateY(100%);
 	}
-	100%{
-		transform: translateY(0%);
-	}
 }
-/* @keyframes textOut{
-	0%{
-		transform: translateY(0%);
-	}
-	100%{
-		transform: translateY(-100%);
-
-	}
-} */
-
 
 .slc-decoration {
     margin: 30px 0;
@@ -137,6 +124,9 @@
     margin: 20px 0;
 }
 
+.slc-mini-text p{
+    text-align: center;
+}
 /* Slider section end */
 
 /* About section start */
@@ -157,6 +147,7 @@
 .about-title img{
     padding: 0 10px;
 }
+
 
 .about-content h3 {
     color: var(--gold);
