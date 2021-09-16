@@ -51,8 +51,6 @@
         font-size: 25px;
     }
 
-
-
     #slider {
         overflow: hidden;
     }
@@ -477,6 +475,11 @@
         grid-column: 1 / 2;
     }
 
+    .header-dec-right,
+    .header-dec-left {
+        display: none;
+    }
+
 
 }
 
@@ -727,6 +730,11 @@
 
     .menu-list {
         grid-column: 1 / 2;
+    }
+
+    .header-dec-right,
+    .header-dec-left {
+        display: none;
     }
 }
 
